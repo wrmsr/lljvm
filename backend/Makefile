@@ -1,6 +1,7 @@
 CXX := c++
-CFLAGS := $(shell llvm-config --cxxflags --ldflags \
+CFLAGS := $(shell ../thirdparty/llvm/build/bin/llvm-config --cxxflags --ldflags \
                               --libs bitreader codegen selectiondag)
+
 OBJS := \
     main.o \
     backend.o \

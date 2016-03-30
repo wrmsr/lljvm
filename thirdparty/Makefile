@@ -1,6 +1,7 @@
 # TODO: refactor duplicate code
 
 DIRS := \
+    llvm \
     newlib \
     bsd-games \
     jpeg \
@@ -16,6 +17,13 @@ ARCHIVES := \
     datalog-1.4.tar.gz \
     zlib-1.2.3.tar.gz \
     libpng-1.2.41.tar.gz
+
+llvm/build:
+	cd llvm && mkdir build
+	cd llvm/build && cmake ..
+
+llvm: llvm/build
+	cd llvm/build && $(MAKE)
 
 newlib: newlib-1.17.0.tar.gz
 	tar -zxvf $<
