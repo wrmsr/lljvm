@@ -51,7 +51,7 @@ default_cflags = (
     '-m32',
 )
 if cc == 'llvm-gcc':
-    default_cflags = default_cflags + ('-malign-double',)
+    default_cflags = default_cflags + ('-mllvm', '-malign-double',)
 
 # default java classes to link against
 default_java_libs = (

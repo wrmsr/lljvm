@@ -5,3 +5,6 @@ lljvm-doc-*.zip
 lljvm-backend
 *~
 Session.vim
+
+.idea
+build/
